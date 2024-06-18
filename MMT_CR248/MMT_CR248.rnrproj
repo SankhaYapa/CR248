@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <BuildTasksDirectory Condition=" '$(BuildTasksDirectory)' == ''">$(MSBuildProgramFiles32)\MSBuild\Microsoft\Dynamics\AX</BuildTasksDirectory>
+    <Model>MINT</Model>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <OutputPath>bin</OutputPath>
+    <SchemaVersion>2.0</SchemaVersion>
+    <GenerateCrossReferences>True</GenerateCrossReferences>
+    <RunAppCheckerRules>False</RunAppCheckerRules>
+    <LogAppcheckerDiagsAsErrors>False</LogAppcheckerDiagsAsErrors>
+    <DeployOnline>False</DeployOnline>
+    <ProjectGuid>{dc90454d-490d-40ce-8a77-1ac65d5adf8a}</ProjectGuid>
+    <Name>MMT_CR248</Name>
+    <RootNamespace>MMT_CR248</RootNamespace>
+    <StartupType>Class</StartupType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <Configuration>Debug</Configuration>
+    <DBSyncInBuild>True</DBSyncInBuild>
+    <GenerateFormAdaptors>False</GenerateFormAdaptors>
+    <Company>
+    </Company>
+    <Partition>initial</Partition>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DataEntityExpandParentChildRelations>False</DataEntityExpandParentChildRelations>
+    <DataEntityUseLabelTextAsFieldName>False</DataEntityUseLabelTextAsFieldName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Classes" />
+    <Folder Include="Forms" />
+    <Folder Include="Menu" />
+    <Folder Include="Tables" />
+    <Folder Include="Views" />
+    <Folder Include="Queries" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AxForm\AllOrdersReportForm">
+      <SubType>Content</SubType>
+      <Name>AllOrdersReportForm</Name>
+      <Link>Forms\AllOrdersReportForm</Link>
+    </Content>
+    <Content Include="AxForm\OrdersReceivedReportForm">
+      <SubType>Content</SubType>
+      <Name>OrdersReceivedReportForm</Name>
+      <Link>Forms\OrdersReceivedReportForm</Link>
+    </Content>
+    <Content Include="AxForm\SupplierPerformanceForm">
+      <SubType>Content</SubType>
+      <Name>SupplierPerformanceForm</Name>
+      <Link>Forms\SupplierPerformanceForm</Link>
+    </Content>
+    <Content Include="AxMenuExtension\ProcurementAndSourcing.MINT">
+      <SubType>Content</SubType>
+      <Name>ProcurementAndSourcing.MINT</Name>
+      <Link>Menu\ProcurementAndSourcing.MINT</Link>
+    </Content>
+    <Content Include="AxMenuItemDisplay\AllOrdersReportMenuItem">
+      <SubType>Content</SubType>
+      <Name>AllOrdersReportMenuItem</Name>
+      <Link>Menu\AllOrdersReportMenuItem</Link>
+    </Content>
+    <Content Include="AxMenuItemDisplay\OrdersReceivedMenuItem">
+      <SubType>Content</SubType>
+      <Name>OrdersReceivedMenuItem</Name>
+      <Link>Menu\OrdersReceivedMenuItem</Link>
+    </Content>
+    <Content Include="AxMenuItemDisplay\SupplierPerformanceMenuItem">
+      <SubType>Content</SubType>
+      <Name>SupplierPerformanceMenuItem</Name>
+      <Link>Menu\SupplierPerformanceMenuItem</Link>
+    </Content>
+    <Content Include="AxQuery\AllOrdersReportQuery">
+      <SubType>Content</SubType>
+      <Name>AllOrdersReportQuery</Name>
+      <Link>Queries\AllOrdersReportQuery</Link>
+    </Content>
+    <Content Include="AxQuery\OrdersReceivedTableQuery">
+      <SubType>Content</SubType>
+      <Name>OrdersReceivedTableQuery</Name>
+      <Link>Queries\OrdersReceivedTableQuery</Link>
+    </Content>
+    <Content Include="AxQuery\SupplierPerformanceQuery">
+      <SubType>Content</SubType>
+      <Name>SupplierPerformanceQuery</Name>
+      <Link>Queries\SupplierPerformanceQuery</Link>
+    </Content>
+    <Content Include="AxTable\AllOrdersReport">
+      <SubType>Content</SubType>
+      <Name>AllOrdersReport</Name>
+      <Link>Tables\AllOrdersReport</Link>
+    </Content>
+    <Content Include="AxTable\OrdersReceived">
+      <SubType>Content</SubType>
+      <Name>OrdersReceived</Name>
+      <Link>Tables\OrdersReceived</Link>
+    </Content>
+    <Content Include="AxTable\SupplierPerformance">
+      <SubType>Content</SubType>
+      <Name>SupplierPerformance</Name>
+      <Link>Tables\SupplierPerformance</Link>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.Common.targets" />
+  <Import Project="$(BuildTasksDirectory)\Microsoft.Dynamics.Framework.Tools.BuildTasks.targets" />
+</Project>
